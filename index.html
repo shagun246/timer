@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timer</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="timer_page">
+      <div class="heading">Timer</div>
+      <div class="timer_window">
+        <section class="sec count_section">
+          <div class="Tab">
+            <div class="labels">HH</div>
+            <div class="hours tab">
+              <!-- <div class="labels">HH</div> -->
+              <span class="tens">0</span>
+              <span class="ones">0</span>
+            </div>
+          </div>
+          <div class="Tab">
+            <div class="labels">MM</div>
+            <div class="minutes tab">
+              <!-- <div class="labels">HH</div> -->
+              <span class="tens">0</span>
+              <span class="ones">0</span>
+            </div>
+          </div>
+          <div class="Tab">
+            <div class="labels">SEC</div>
+            <div class="seconds tab">
+              <!-- <div class="labels">HH</div> -->
+              <span class="tens">0</span>
+              <span class="ones">0</span>
+            </div>
+          </div>
+        </section>
+        <section class="sec lap_btn btn" onclick="lap()">
+          <span>Lap</span>
+        </section>
+        <section class="sec action_btn">
+          <div class="reset_btn btn" onclick="reset()">
+            <span>RESET</span>
+          </div>
+          <div class="stop_btn btn" onclick="stop()">
+            <span>PAUSE</span>
+          </div>
+          <div class="start_btn btn" onclick="start()">
+            <span>START</span>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div class="lapped_time labels">
+      <span class="h">00</span>
+      <span class="m">00</span>
+      <span class="s">00</span>
+    </div>
+    <div class="show_all_lap">
+      <ul class="laps">
+        <li class="items">
+          <span class="h">00</span>
+          <span class="m">00</span>
+          <span class="s">00</span>
+        </li>
+      </ul>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
