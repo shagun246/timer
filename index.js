@@ -1,5 +1,6 @@
 console.log('Script is working fine');
 
+// Gloabally ACCESSIBLE BUTTONS 
 let rst = document.getElementsByClassName('reset_btn')
 let stt = document.getElementsByClassName('start_btn')
 let stp = document.getElementsByClassName('stop_btn')
@@ -8,20 +9,16 @@ console.log('rst', rst);
 console.log('stt', stt);
 console.log('stp', stp);
 
+// GLobally ACESSIBLE TIMER REFERNCE 
 let timeRef
 
-// toggle display 
 function start() {
+    // toggle display 
     rst[0].style.display = 'block'
     stp[0].style.display = 'block'
     stt[0].style.display = 'none'
 
-    function increment(no_str) {
-        let no = parseInt(no_str);
-        no = no + 1;
-        return `${no}`
-    }
-
+    // ACCESSING HOURS MINUTES AND SECONDS 
     let hoursT = document.querySelector('.hours .tens').textContent
     let hoursO = document.querySelector('.hours .ones').textContent
     let minutesT = document.querySelector('.minutes .tens').textContent
@@ -29,6 +26,7 @@ function start() {
     let secondsT = document.querySelector('.seconds .tens').textContent
     let secondsO = document.querySelector('.seconds .ones').textContent
 
+    // CONVERTING TO INGERERS 
     hoursT = parseInt(hoursT)
     hoursO = parseInt(hoursO)
     minutesT = parseInt(minutesT)
@@ -40,6 +38,8 @@ function start() {
     console.log('minutes', minutesT, minutesO);
     console.log('seconds', secondsT, secondsO);
 
+
+    // THE TIMER FUNCTION LOGIC 
     let timerArr = [secondsO, secondsT, minutesO, minutesT, hoursO, hoursT]
     let i = 0;
     function timer() {
@@ -60,6 +60,7 @@ function start() {
         }
         console.log(timerArr);
 
+        // DISPPLAYING THE UPDATED CLOCK 
         document.querySelector('.hours .tens').textContent = timerArr[5]
         document.querySelector('.hours .ones').textContent = timerArr[4]
         document.querySelector('.minutes .tens').textContent = timerArr[3]
@@ -74,6 +75,7 @@ function start() {
 
 }
 
+// STOP BUTTON ACTION CONTROLLER 
 function stop() {
     clearInterval(timeRef);
     rst[0].style.display = 'none'
@@ -81,6 +83,7 @@ function stop() {
     stt[0].style.display = 'block'
 }
 
+// RESET BUTTON ACTION CONTROLLER 
 function reset() {
     if (timeRef != undefined) {
         clearInterval(timeRef);
@@ -96,8 +99,10 @@ function reset() {
     document.querySelector('.seconds .ones').textContent = 0
 }
 
+// GLobally Acessible ARRAY WITH ALL LAP TIMES STORED 
 let lappedArr = []
 
+// LAP BUTTON ACTION CONTROLLER 
 function lap(){
 
     let hoursT = document.querySelector('.hours .tens').textContent

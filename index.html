@@ -7,14 +7,25 @@
     <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
+
+    <!-- the timer page  -->
+
     <div class="timer_page">
+
+      <!-- timer heading  -->
+
       <div class="heading">Timer</div>
+
+      <!-- timer panel  :  divided into three sections -->
+
       <div class="timer_window">
+
+        <!-- section 1 : count down display sectionn  -->
+
         <section class="sec count_section">
           <div class="Tab">
             <div class="labels">HH</div>
             <div class="hours tab">
-              <!-- <div class="labels">HH</div> -->
               <span class="tens">0</span>
               <span class="ones">0</span>
             </div>
@@ -22,7 +33,6 @@
           <div class="Tab">
             <div class="labels">MM</div>
             <div class="minutes tab">
-              <!-- <div class="labels">HH</div> -->
               <span class="tens">0</span>
               <span class="ones">0</span>
             </div>
@@ -30,15 +40,19 @@
           <div class="Tab">
             <div class="labels">SEC</div>
             <div class="seconds tab">
-              <!-- <div class="labels">HH</div> -->
               <span class="tens">0</span>
               <span class="ones">0</span>
             </div>
           </div>
         </section>
+
+        <!-- section 2  : Lap button section  -->
+
         <section class="sec lap_btn btn" onclick="lap()">
           <span>Lap</span>
         </section>
+
+        <!-- Section 3  : Action Button section  -->
         <section class="sec action_btn">
           <div class="reset_btn btn" onclick="reset()">
             <span>RESET</span>
@@ -52,11 +66,16 @@
         </section>
       </div>
     </div>
+
+    <!-- lapped time container  -->
+
     <div class="lapped_time labels">
       <span class="h">00</span>
       <span class="m">00</span>
       <span class="s">00</span>
     </div>
+
+    <!-- Future Work :  ADD ALL LAPPED TIMER OPTIONS  -->
     <div class="show_all_lap">
       <ul class="laps">
         <li class="items">
